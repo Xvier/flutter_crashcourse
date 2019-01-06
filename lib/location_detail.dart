@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'styles.dart';
 import './models/location.dart';
-
+import './mocks/mock_location.dart';
 class LocationDetail extends StatelessWidget {
-  final Location location;
+  final int index;
 
-  LocationDetail(this.location);
+  
+  LocationDetail(this.index);
 
   @override
   Widget build(BuildContext context) {
+    var location = MockLocation.fetch(index);
     return Scaffold(
       appBar: AppBar(
         title: Text(location.name,
