@@ -83,4 +83,8 @@ class MockLocation extends Location {
   static Location fetchAny() {
     return MockLocation.items[0];
   }
+
+  static Location fetch(int index){
+    return MockLocation.items[index];
+  }
 }
